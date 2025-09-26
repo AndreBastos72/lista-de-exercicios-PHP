@@ -15,12 +15,24 @@
     </header>
 
     <main>
+    <main>
     <?php
-    $valor_hora = $_POST["valor_hora"];
-    $horas_trabalhadas = $_POST["horas_trabalhadas"];
+        // Define as variáveis
+        $valorHora = 25.50; // Valor recebido por hora
+        $horasTrabalhadas = 160; // Total de horas trabalhadas no mês
 
-    echo "Seu salário do mês é R$" . ($valor_hora * $horas_trabalhadas);
+        // Calcula o salário bruto
+        $salario = $valorHora * $horasTrabalhadas;
+
+        // Formata o salário para o padrão monetário brasileiro (R$)
+        $salarioFormatado = number_format($salario, 2, ',', '.');
+
+        // Exibe o resultado
+        echo "<p>Valor da hora de trabalho: <strong>R$ " . number_format($valorHora, 2, ',', '.') . "</strong></p>";
+        echo "<p>Total de horas trabalhadas no mês: <strong>$horasTrabalhadas</strong></p>";
+        echo "<p>O salário total a ser recebido é de <strong>R$ $salarioFormatado</strong>.</p>";
     ?>
+</main>
      
     </main>
 </body>
