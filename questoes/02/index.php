@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF--8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial - Exercícios PHP</title>
     <link rel="stylesheet" href="./../../styles.css">
@@ -15,26 +15,17 @@
     </header>
 
     <main>
+        <?php
+            // Define o valor em metros
+            $metros = 5;
 
-    <?php 
+            // Calcula os centímetros (1 metro = 100 centímetros)
+            $centimetros = $metros * 100;
 
-    function ConverterMetrosCentimetros($metros) {
-        $resultado = $metros * 100;
-        return $resultado;
-    }
-   
-   echo ConverterMetrosCentimetros(99);
-
-    // $distanciaMetros = 100;
-
-    // $x = ConverterMetrosCentimetros(100);
-
-    // echo $x;
-
-    ?>
-     
+            // Exibe o resultado na tela
+            echo "<p>O valor de <strong>$metros metros</strong> corresponde a <strong>$centimetros centímetros</strong>.</p>";
+        ?>
     </main>
 </body>
-
 
 </html>
